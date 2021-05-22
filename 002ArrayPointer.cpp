@@ -4,7 +4,7 @@
 void printArr(int* a, int len){
 	// fix me
 	int* address = a;
-	for(int i = 0; i<len; i++){
+	for(int i = 0; i <len;  i++){
 		printf("%d\t", *address);
 		address++;
 	}
