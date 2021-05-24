@@ -4,15 +4,14 @@ void endiantest(){
 
     int test = 0x1234;
 
-    printf("%x\n", *(char*)&test);
+    printf("%x", *(char*)&test);
 
-    if(*(char*)&test == 0x34){
-        printf("litlle endian system");
+    if(*(char*)&test==0x12){
+        printf("Big endian!");
     }
     else{
-        printf("big endian");
+        printf("little endian!");
     }
-    
 }
 
 int main(){
