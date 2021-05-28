@@ -39,7 +39,6 @@ int main(){
     printf("str05 : %s", str05);
     puts(str05);
 
-
     char strdst[STR_MAX];
     printf("input string for _dst: ");
     fgets(strdst, sizeof(strdst), stdin);
@@ -53,7 +52,6 @@ int main(){
     strsrc[stringLength(strsrc)-1]=' ';
     stringConcatenate(strdst, strsrc);
     puts(strdst);
-
 
     return 0;
 }
@@ -71,7 +69,7 @@ char* stringCopy(char* _dst, const char* _src){
 
     int i = 0;
     while(_src[i]!='\0'){
-        _dst[i]= _src[i];
+        _dst[i] = _src[i];
         i++;
     }
     _dst[i]='\0';

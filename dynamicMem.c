@@ -16,8 +16,11 @@ typedef struct {
 int setStudent(student* _dst){
 	_dst->age = rand()%100;
 	_dst->score = rand()%100;
-	
-	int nameLen = rand()%MAXNAME;
+	char inputName[MAXNAME];
+	printf("input Name: ");
+	scanf("%s",inputName);
+
+	int nameLen = strlen(inputName);
 	
 //	//static memory
 //	for (int i=0; i<nameLen; i++){
@@ -27,9 +30,7 @@ int setStudent(student* _dst){
 	//dynamic memory
 	_dst->name = (char*)calloc(nameLen, sizeof(char));//to avoid to access at garbage value, use calloc!
 	heapUsage+= sizeof(char)*nameLen;
-	for (int i=0; i<nameLen; i++){
-		_dst->name[i] = 'a'+rand()%26;
-	}
+	_dst->name = inputName;
 }
 
 int main(){
